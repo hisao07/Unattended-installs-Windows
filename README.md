@@ -250,11 +250,26 @@ packer build --only=virtualbox-iso windows_2022_docker.json
 After building, you can expect a box package like `windows_2022_docker_virtualbox.box`
 in the working directory.
 
+Run following commands to create a Vagrantfile and to add the VM to Virtualbox:
+
+```
+vagrant box add "Windows 2022 Docker" windows_2022_docker_virtualbox.box
+vagrant up
+```
+
 
 ### Using .box Files With Vagrant
 
 The generated box files include a Vagrantfile template that is suitable for use
 with Vagrant 1.7.4+, but the latest version is always recommended.
+
+Installed required plugins for WinRM:
+
+```
+vagrant plugin install winrm
+vagrant plugin install winrm-fs
+vagrant plugin install winrm-elevated
+```
 
 Example Steps for Hyper-V:
 
