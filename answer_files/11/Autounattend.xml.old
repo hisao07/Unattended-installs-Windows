@@ -82,7 +82,8 @@
 
     </RunSynchronous>
             <DiskConfiguration>
-                <Disk wcm:action="add">
+                <Diskwq
+ wcm:action="add">
                     <CreatePartitions>
                         <CreatePartition wcm:action="add">
                             <Order>1</Order>
