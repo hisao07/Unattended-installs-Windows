@@ -244,16 +244,17 @@ When using VirtualBox, you can use the following sample command to build a
 corresponding VM image:
 
 ```
-packer build --only=virtualbox-iso windows_2022_docker.json
+packer build --only=virtualbox-iso windows_11.json
 ```
 
-After building, you can expect a box package like `windows_2022_docker_virtualbox.box`
+After building, you can expect a box package like `windows_11_virtualbox.box`
 in the working directory.
 
 Run following commands to create a Vagrantfile and to add the VM to Virtualbox:
 
 ```
-vagrant box add "Windows 2022 Docker" windows_2022_docker_virtualbox.box
+vagrant box add --name "Windows 11 Test" windows_11_virtualbox.box
+vagrant init "Windows 11 Test"
 vagrant up
 ```
 
