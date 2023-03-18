@@ -15,11 +15,8 @@
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
-        "./scripts/tools/7zip.ps1",
-        "./scripts/tools/firefox.ps1",
-        "./scripts/tools/chrome.ps1",
-        "./scripts/tools/sysinternals.ps1",
-        "./scripts/tools/vscode.ps1"
+        "./scripts/chocolatey.bat",
+        "./scripts/chocopacks.bat"
       ],
       "headless": true,
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -62,11 +59,8 @@
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
-        "./scripts/tools/7zip.ps1",
-        "./scripts/tools/firefox.ps1",
-        "./scripts/tools/chrome.ps1",
-        "./scripts/tools/sysinternals.ps1",
-        "./scripts/tools/vscode.ps1"
+        "./scripts/chocolatey.bat",
+        "./scripts/chocopacks.bat"
       ],
       "guest_additions_mode": "none",
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -96,12 +90,9 @@
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
-        "./scripts/tools/7zip.ps1",
-        "./scripts/tools/firefox.ps1",
-        "./scripts/tools/chrome.ps1",
-        "./scripts/tools/sysinternals.ps1",
-        "./scripts/tools/vscode.ps1"
+        "./scripts/chocolatey.bat",
+        "./scripts/chocopacks.bat",
+        "./scripts/win-updates.ps1"
       ],
       "guest_os_type": "windows9-64",
       "headless": "{{user `headless`}}",
@@ -136,14 +127,10 @@
         "./scripts/disable-screensaver.ps1",
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
+        "./scripts/chocolatey.bat",
+        "./scripts/chocopacks.bat",
         "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
-
-        "./scripts/tools/7zip.ps1",
-        "./scripts/tools/firefox.ps1",
-        "./scripts/tools/chrome.ps1",
-        "./scripts/tools/sysinternals.ps1",
-        "./scripts/tools/vscode.ps1"
+        "./scripts/win-updates.ps1"
       ],
       "guest_additions_mode": "disable",
       "guest_os_type": "Windows10_64",
@@ -173,11 +160,8 @@
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
-        "./scripts/tools/7zip.ps1",
-        "./scripts/tools/firefox.ps1",
-        "./scripts/tools/chrome.ps1",
-        "./scripts/tools/sysinternals.ps1",
-        "./scripts/tools/vscode.ps1"
+        "./scripts/chocolatey.bat",
+        "./scripts/chocopacks.bat"
       ],
       "guest_os_type": "win-10",
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -244,7 +228,6 @@
       "execute_command": "{{ .Vars }} cmd /c \"{{ .Path }}\"",
       "remote_path": "/tmp/script.bat",
       "scripts": [
-        "./scripts/pin-powershell.bat",
         "./scripts/compile-dotnet-assemblies.bat",
         "./scripts/set-winrm-automatic.bat",
         "./scripts/uac-enable.bat",

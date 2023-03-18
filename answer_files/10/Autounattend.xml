@@ -256,39 +256,20 @@
 
                 <!-- START TOOLS INSTALL -->
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\firefox.ps1</CommandLine>
-                    <Description>Install Firefox</Description>
-                    <Order>60</Order>
-                    <RequiresUserInput>true</RequiresUserInput>
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\chocolatey.bat</CommandLine>
+                    <Description>Install Chocolatey</Description>
+                    <Order>30</Order>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\chrome.ps1</CommandLine>
-                    <Description>Install Chrome</Description>
-                    <Order>61</Order>
-                    <RequiresUserInput>true</RequiresUserInput>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\sysinternals.ps1</CommandLine>
-                    <Description>Install Sysinternals suite</Description>
-                    <Order>62</Order>
-                    <RequiresUserInput>true</RequiresUserInput>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\7zip.ps1</CommandLine>
-                    <Description>Install 7zip</Description>
-                    <Order>63</Order>
-                    <RequiresUserInput>true</RequiresUserInput>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\vscode.ps1</CommandLine>
-                    <Description>Install VSCode</Description>
-                    <Order>64</Order>
-                    <RequiresUserInput>true</RequiresUserInput>
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\chocopacks.bat</CommandLine>
+                    <Description>Install tools via Chocolatey</Description>
+                    <Order>31</Order>
                 </SynchronousCommand>
                 <!-- END TOOLS INSTALL -->
 
                 <!-- WITHOUT WINDOWS UPDATES -->
                 <!--
+
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\enable-winrm.ps1</CommandLine>
                     <Description>Enable WinRM</Description>
@@ -302,7 +283,6 @@
                     <Order>98</Order>
                     <Description>Enable Microsoft Updates</Description>
                 </SynchronousCommand>
-
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\disable-screensaver.ps1</CommandLine>
                     <Description>Disable Screensaver</Description>
