@@ -1,6 +1,6 @@
-:: Ensure C:\Chocolatey\bin is on the path
-set /p PATH=%PATH%;C:\ProgramData\chocolatey\
-echo %PATH%
+:: Ensure C:\Chocolatey\bin is on the path, machine local and current session
+::setx /M path %PATH%;C:\ProgramData\chocolatey\
+::set PATH=%PATH%;C:\ProgramData\chocolatey\
 
 :: Install all the things; for example:
 choco install /y 7zip
@@ -15,5 +15,4 @@ choco install /y firefox
 choco install /y googlechrome
 choco install /y python3
 choco install /y sysinternals
-choco install /y treesizefree
 :: choco install /y office365proplus

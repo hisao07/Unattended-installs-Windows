@@ -202,7 +202,9 @@
         "./scripts/compile-dotnet-assemblies.bat",
         "./scripts/set-winrm-automatic.bat",
         "./scripts/uac-enable.bat",
-        "./scripts/compact.bat"
+        "./scripts/compact.bat",
+        "./scripts/chocolatey.bat",
+        "./scripts/chocopacks.bat"
       ],
       "type": "windows-shell"
     }

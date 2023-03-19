@@ -14,9 +14,7 @@
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
-        "./scripts/chocolatey.bat",
-        "./scripts/chocopacks.bat"
+        "./scripts/win-updates.ps1"
       ],
       "headless": true,
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -58,9 +56,7 @@
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
-        "./scripts/chocolatey.bat",
-        "./scripts/chocopacks.bat"
+        "./scripts/win-updates.ps1"
       ],
       "guest_additions_mode": "none",
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -90,8 +86,6 @@
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
-        "./scripts/chocolatey.bat",
-        "./scripts/chocopacks.bat",
         "./scripts/win-updates.ps1"
       ],
       "guest_os_type": "windows9-64",
@@ -127,8 +121,6 @@
         "./scripts/disable-screensaver.ps1",
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
-        "./scripts/chocolatey.bat",
-        "./scripts/chocopacks.bat",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1"
       ],
@@ -159,9 +151,7 @@
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
         "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
-        "./scripts/chocolatey.bat",
-        "./scripts/chocopacks.bat"
+        "./scripts/win-updates.ps1"
       ],
       "guest_os_type": "win-10",
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -231,7 +221,9 @@
         "./scripts/compile-dotnet-assemblies.bat",
         "./scripts/set-winrm-automatic.bat",
         "./scripts/uac-enable.bat",
-        "./scripts/compact.bat"
+        "./scripts/compact.bat",
+        "./scripts/chocolatey.bat",
+        "./scripts/chocopacks.bat"
       ],
       "type": "windows-shell"
     }
