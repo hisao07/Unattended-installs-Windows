@@ -1,6 +1,75 @@
 # Windows Templates for Packer
 
-[![Build status](https://ci.appveyor.com/api/projects/status/76pea1oexae5ca05?svg=true)](https://ci.appveyor.com/project/StefanScherer/packer-windows)
+Forked from ([StefanScherer's repo](https://github.com/StefanScherer/packer-windows)), using manually modified configs.
+Currently modified Windows 10 and 11 for unattended installs, using Chocolatey as package manager.
+Downloads the ISO from Microsoft for a clean install and uses the Evaluation keys from [MS](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise).
+
+## Quick Start
+Install Vagrant, Packer and related requirements using your distro's package manager. Commands below are meant for Debian based installations and uses Virtualbox as hypervisor. However, other supported hypervisors should work as well. Credentials used for installation: user / changeme
+
+### Install tools
+
+```
+sudo apt install vagrant packer
+```
+
+### Install Vagrant modules
+
+These modules are required to perform post-installation provisioning commands, based on WinRM.
+
+```
+vagrant plugin install winrm
+vagrant plugin install winrm-fs
+vagrant plugin install winrm-elevated
+```
+
+### Create Packer image
+
+```
+packer build --only=virtualbox-iso windows_10.json
+```
+
+After building, you can expect a box package like `windows_10_virtualbox.box` in the working directory.
+
+### Add VM
+
+Run following commands to create a Vagrantfile and to add the VM to Virtualbox:
+
+```
+vagrant box add --name "Windows 10 Test" windows_10_virtualbox.box
+vagrant init "Windows 10 Test"
+vagrant up
+```
+
+## Provisioned tools
+
+Tools below are currently used in configuration file [chocopacks.bat](scripts/chocopacks.bat).
+Add or remove installers using listed packages as described on [Chocolatey packages](https://community.chocolatey.org/packages).
+
+  * 7zip
+  * dnspy
+  * firefox
+  * googlechrome
+  * notepadplusplus
+  * processhacker
+  * putty
+  * python3
+  * sysinternals
+  * vscode
+  * winscp
+  * wireshark
+
+### Adding additional packages post-install manually
+
+Install using system wide PATH variable for choco.exe:
+
+```
+choco install {PACKAGE}
+```
+
+
+## Original README content
+----------------------
 
 ### Introduction
 
