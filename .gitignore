@@ -17,5 +17,6 @@
 *.webm
 tmp
 /issues/
+/.vagrant/
 *.iso
 path-to.vmx
