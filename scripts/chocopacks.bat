@@ -24,6 +24,7 @@ choco install /y wireshark
 choco install /y firefox
 choco install /y googlechrome
 choco install /y python3
+choco install /y windows-optimize-debloat
 :: Bug when checking checksums as of 27-07-23, disabled for now
 choco install /y --ignore-checksums sysinternals
 :: choco install /y office365proplus
