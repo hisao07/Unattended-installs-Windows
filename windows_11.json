@@ -10,7 +10,7 @@
         "exit<return>",
         "<wait><return>"
       ],
-      "boot_wait": "1m",
+      "boot_wait": "5m",
       "communicator": "winrm",
       "configuration_version": "8.0",
       "cpus": "2",
@@ -46,7 +46,7 @@
         "exit<return>",
         "<wait><return>"
       ],
-      "boot_wait": "1m",
+      "boot_wait": "5m",
       "communicator": "winrm",
       "cpus": 2,
       "disk_adapter_type": "lsisas1068",
@@ -84,7 +84,7 @@
     {
       "boot_command": [
       ],
-      "boot_wait": "1m",
+      "boot_wait": "5m",
       "communicator": "winrm",
       "cpus": 2,
       "disk_size": "{{user `disk_size`}}",
@@ -121,7 +121,7 @@
         "exit<return>",
         "<wait><return>"
       ],
-      "boot_wait": "1m",
+      "boot_wait": "5m",
       "communicator": "winrm",
       "cpus": 2,
       "disk_size": "{{user `disk_size`}}",

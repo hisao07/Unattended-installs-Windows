@@ -7,7 +7,9 @@ choco install /y 7zip
 choco install /y notepadplusplus
 choco install /y bleachbit
 choco install /y vscode
+choco install /y visualstudio2022community
 choco install /y dnspy
+choco install /y ida-free
 choco install /y putty
 choco install /y git
 choco install /y golang
